@@ -1,4 +1,7 @@
-/* RemixDesign | woaichidapi@163.com | Redesigned by JimmyCheung */
+#wrapper {
+  min-height: calc(100vh - 250px);
+}
+
 
 .audioplayer {
     display: flex;
