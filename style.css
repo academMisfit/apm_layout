@@ -1,5 +1,5 @@
 #wrapper {
-  min-height: calc(100vh - 250px);
+  min-height: calc(100vh - 176px);
 }
 
 
@@ -233,4 +233,25 @@
     .audioplayer-volume-adjust {
         display: none;
     }
+}
+
+/* social panel */
+.likes, .chat-toggler {
+  width: 10%;
+  border-radius: 5px;
+  background-color: white;
+}
+.likes i, .chat-toggler i {
+  cursor: pointer;
+}
+.chat-toggler i.collapsed:hover {
+  text-shadow: #7266ba 2px 1px 5px;
+}
+.chat-toggler i.collapsed {
+  color: #695bbb;
+  text-shadow: unset;
+}
+.chat-toggler i {
+  color: #f46dc6;
+  text-shadow: #f283cc 2px 1px 5px;
 }
