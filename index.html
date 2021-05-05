@@ -3,221 +3,323 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>APM layout</title>
+    <title>Basic HTML file</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <!-- chat stylesheet -->
-    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <link rel="stylesheet" href="css/audio.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/47e9ac2623.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <!-- scrolling engine -->
     <script src="js/jquery.nicescroll.min.js"></script>
-    <!-- chat scroll feature -->
     <script src="js/chat_scroll.js"></script>
+    <script src="js/chat_funcs.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-0">
-      <div class="container-fluid">
-        <a href="#" class="navbar-brand mr-3">Tutorial Republic</a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <div class="navbar-nav">
-              <a href="#" class="nav-item nav-link active">Home</a>
-              <a href="#" class="nav-item nav-link">Services</a>
-              <a href="#" class="nav-item nav-link">About</a>
-              <a href="#" class="nav-item nav-link">Contact</a>
-          </div>
-          <div class="navbar-nav ml-auto">
-              <a href="#" class="nav-item nav-link">Register</a>
-              <a href="#" class="nav-item nav-link">Login</a>
-          </div>
+      <a href="#" class="navbar-brand mr-3">Tutorial Republic</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+          <a href="#" class="nav-item nav-link active">Home</a>
+          <a href="#" class="nav-item nav-link">Services</a>
+          <a href="#" class="nav-item nav-link">About</a>
+          <a href="#" class="nav-item nav-link">Contact</a>
+        </div>
+        <div class="navbar-nav ml-auto">
+          <a href="#" class="nav-item nav-link">Register</a>
+          <a href="#" class="nav-item nav-link">Login</a>
         </div>
       </div>
     </nav>
     <!-- radio element -->
-    <!-- <div id="wrapper"> -->
-  		<audio preload="auto" controls>
-  					<source src="https://tympanus.net/Development/AudioPlayer/audio/BlueDucks_FourFlossFiveSix.mp3">
-  		</audio>
-      <!-- radio social panel -->
-      <div class="social-icons d-flex flex-row mb-3">
-        <div class="ml-3 likes text-center">
-          <i class="far fa-heart"></i>
-          <span>0</span>
-        </div>
-        <div class="ml-2 chat-toggler text-center" data-toggle="tooltip" data-placement="bottom" title="Активировать чат">
-          <i class="far fa-comment-alt collapsed" data-toggle="collapse" data-target="#collapseChat"></i>
-          <!-- <img src="img/comment-alt-regular.svg" alt="chat" data-toggle="collapse" data-target="#collapseChat"> -->
-        </div>
+    <audio preload="auto" controls>
+			<source src="https://tympanus.net/Development/AudioPlayer/audio/BlueDucks_FourFlossFiveSix.mp3">
+		</audio>
+    <!-- radio social panel -->
+    <div class="social-icons d-flex flex-row mb-3">
+      <div class="ml-3 likes text-center">
+        <i class="far fa-heart"></i>
+        <span>0</span>
       </div>
+    </div>
+		<script src="js/audioplayer.js"></script>
+		<script>
+			$(function() {
+				$('audio').audioPlayer();
+			});
+		</script>
 
-  		<script src="js/audioplayer.js"></script>
-  		<script>
-  			$(function() {
-  				$('audio').audioPlayer();
-  			});
-  		</script>
-  	<!-- </div> -->
-
-
-    <!-- chat layout -->
-    <div class="container" id="wrapper">
-      <div class="content container-fluid bootstrap snippets bootdey">
-        <div class="row row-broken collapse" id="collapseChat">
-          <div class="col-sm-3 col-xs-12">
-            <div class="col-inside-lg decor-default chat" style="overflow: hidden; outline: none;" tabindex="5000">
-              <!-- participants list (chat users) -->
-              <div class="chat-users">
-                <h6>Online</h6>
-                  <div class="user">
-                      <div class="avatar">
-                      <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User name">
-                      <div class="status off"></div>
-                      </div>
-                      <div class="name">User name</div>
-                      <div class="mood">User mood</div>
-                  </div>
-                  <div class="user">
-                      <div class="avatar">
-                      <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="User name">
-                      <div class="status online"></div>
-                      </div>
-                      <div class="name">User name</div>
-                      <div class="mood">User mood</div>
-                  </div>
-                  <div class="user">
-                      <div class="avatar">
-                      <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="User name">
-                      <div class="status busy"></div>
-                      </div>
-                      <div class="name">User name</div>
-                      <div class="mood">User mood</div>
-                  </div>
-                  <div class="user">
-                      <div class="avatar">
-                      <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="User name">
-                      <div class="status offline"></div>
-                      </div>
-                      <div class="name">User name</div>
-                      <div class="mood">User mood</div>
-                  </div>
-                  <div class="user">
-                      <div class="avatar">
-                      <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="User name">
-                      <div class="status off"></div>
-                      </div>
-                      <div class="name">User name</div>
-                      <div class="mood">User mood</div>
-                  </div>
-                  <div class="user">
-                      <div class="avatar">
-                      <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="User name">
-                      <div class="status online"></div>
-                      </div>
-                      <div class="name">User name</div>
-                      <div class="mood">User mood</div>
-                  </div>
-              </div>
+    <!-- page content -->
+    <div class="container-fluid mt-4">
+      <div class="row">
+        <!-- Carousel -->
+        <div class="col-12 col-md-3 slidebar">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="...">
             </div>
           </div>
-          <div class="col-sm-9 col-xs-12 chat" style="overflow: hidden; outline: none;" tabindex="5001">
-            <div class="col-inside-lg decor-default">
-              <!-- chat body -->
-              <div class="chat-body">
-                <h6>Mini Chat</h6>
-                <div class="answer left">
-                  <div class="avatar">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User name">
-                    <div class="status offline"></div>
-                  </div>
-                  <div class="name">Alexander Herthic</div>
-                  <div class="text">
-                    Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adiping elit
-                  </div>
-                  <div class="time">5 min ago</div>
+        </div>
+        </div>
+        <!--chat layout -->
+        <div class="pc-tab col-md-9">
+          <input checked="checked" id="tab1" type="radio" name="pct" />
+          <input id="tab2" type="radio" name="pct" />
+          <nav>
+            <ul>
+              <li class="tab1">
+                <label for="tab1">Online</label>
+              </li>
+              <li class="tab2">
+                <label for="tab2">Messages</label>
+              </li>
+            </ul>
+          </nav>
+          <section>
+            <!-- users online -->
+            <div class="tab1 radiochat container-fluid">
+              <!-- chat controls -->
+              <div class="chat-ctrls my-0 d-flex justify-content-end">
+                <h3 class="mr-auto">Пользователи онлайн</h3>
+                <span class="roll_up mr-2">&nbsp;&nbsp;&nbsp;</span>
+                <button type="button" class="close" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <ul class="list-group list-group-flush">
+                <!-- user -->
+                <li class="list-group-item">
+                  <a href="#">
+                    <div class="d-flex flex-row">
+                      <div class="avatar mr-2">MH</div><span class="my-auto">Michael Hartl</span>
+                    </div>
+                  </a>
+                </li>
+                <!-- user -->
+                <li class="list-group-item">
+                  <a href="#">
+                    <div class="d-flex flex-row">
+                      <div class="avatar mr-2">MH</div><span class="my-auto">Michael Hartl</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+            </div>
+            <!-- chat body -->
+            <div class="tab2 radiochat container-fluid">
+              <!-- chat controls -->
+              <div class="chat-ctrls my-0 d-flex justify-content-end">
+                <span class="roll_up mr-3">&nbsp;&nbsp;&nbsp;</span>
+                <button type="button" class="close" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <!-- left message -->
+              <div class="row left d-flex flex-row">
+                <div class="wrapper d-flex mx-2">
+                  <div class="avatar align-self-end">ZW</div>
                 </div>
-                <div class="answer right">
-                  <div class="avatar">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="User name">
-                    <div class="status offline"></div>
-                  </div>
-                  <div class="name">Alexander Herthic</div>
-                  <div class="text">
-                    Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adiping elit
-                  </div>
-                  <div class="time">5 min ago</div>
+                <div class="text w-75">
+
+                  <h4>Michael Hartl</h4>
+                  <div class="status offline"></div>
+                  <p>
+                    Lorem ipsum !ol dolor sit amet, consectetur adipisicing elit. Laborum nesciunt ipsum dolore
+                    error repellendus officiis aliquid a, vitae reprehenderit,
+                    accusantium vero, ad. Obcaecati numquam sapiente cupiditate.
+                    Praesentium eaque, quae error
+                  </p>
                 </div>
-                <div class="answer left">
-                  <div class="avatar">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User name">
-                    <div class="status online"></div>
-                  </div>
-                  <div class="name">Alexander Herthic</div>
-                  <div class="text">
-                    ...
-                  </div>
-                  <div class="time">5 min ago</div>
+                <!-- social panel -->
+                <div class="col-2 col-sm-3"></div>
+                <ul class="list-group list-group-horizontal social-panel">
+                  <li class="list-group-item msg-likes"><i class="far fa-thumbs-up"></i><span>0</span></li>
+                  <li class="list-group-item msg-dislikes"><i class="fas fa-thumbs-down"></i><span>0</span></li>
+                  <li class="list-group-item reply"><span>Ответить</span></li>
+                  <li class="list-group-item ban"><i class="fas fa-ban"></i></li>
+                </ul>
+              </div>
+              <!-- right message -->
+              <div class="row right d-flex justify-content-end">
+                <div class="text w-75 text-right">
+                  <h4>Bob Marley</h4>
+                  <p>
+                    Lorem ipsum !ol dolor sit amet, consectetur adipisicing elit. Laborum nesciunt ipsum dolore
+                    error repellendus officiis aliquid a, vitae reprehenderit,
+                    accusantium vero, ad. Obcaecati numquam sapiente cupiditate.
+                    Praesentium eaque, quae error
+                  </p>
                 </div>
-                <div class="answer right">
-                  <div class="avatar">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="User name">
-                    <div class="status busy"></div>
-                  </div>
-                  <div class="name">Alexander Herthic</div>
-                  <div class="text">
-                    It is a long established fact that a reader will be. Thanks Mate!
-                  </div>
-                  <div class="time">5 min ago</div>
+                <div class="wrapper d-flex mx-2">
+                  <div class="avatar align-self-end">ZW</div>
                 </div>
-                <div class="answer right">
-                  <div class="avatar">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="User name">
-                    <div class="status off"></div>
-                  </div>
-                  <div class="name">Alexander Herthic</div>
-                  <div class="text">
-                    It is a long established fact that a reader will be. Thanks Mate!
-                  </div>
-                  <div class="time">5 min ago</div>
+                <!-- social panel -->
+                <ul class="list-group list-group-horizontal social-panel">
+                  <li class="list-group-item no-hover msg-likes"><i class="far fa-thumbs-up"></i><span>0</span></li>
+                  <li class="list-group-item no-hover msg-dislikes"><i class="fas fa-thumbs-down"></i><span>0</span></li>
+                </ul>
+                <div class="col-2 col-sm-4"></div>
+              </div>
+              <!-- left message -->
+              <div class="row left d-flex flex-row">
+                <div class="wrapper d-flex mx-2">
+                  <div class="avatar align-self-end">ZW</div>
                 </div>
-                <div class="answer left">
-                  <div class="avatar">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="User name">
-                    <div class="status offline"></div>
+                <div class="text w-75">
+                  <h4>Michael Hartl</h4>
+                  <div class="status online"></div>
+                  <div class="reply-msg"><h6 class="font-weight-bold">Bob Marley</h6><p>Lorem ipsum !ol dolor sit amet, consectetur adipisicing elit. Laborum nesciunt ipsum dolore</p>
                   </div>
-                  <div class="name">Alexander Herthic</div>
-                  <div class="text">
-                    Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adipisicing elit Lorem ipsum dolor amet, consectetur adiping elit
+                  <p>
+                    Lorem ipsum !ol dolor sit amet, consectetur adipisicing elit. Laborum nesciunt ipsum dolore
+                    error repellendus officiis aliquid a, vitae reprehenderit,
+                    accusantium vero, ad. Obcaecati numquam sapiente cupiditate.
+                    Praesentium eaque, quae error
+                  </p>
+                </div>
+                <!-- social panel -->
+                <div class="col-2 col-sm-3"></div>
+                <ul class="list-group list-group-horizontal social-panel">
+                  <li class="list-group-item msg-likes"><i class="far fa-thumbs-up"></i><span>150</span></li>
+                  <li class="list-group-item msg-dislikes"><i class="fas fa-thumbs-down"></i><span>100</span></li>
+                  <li class="list-group-item reply"><span>Ответить</span></li>
+                  <li class="list-group-item"><i class="fas fa-ban"></i></li>
+                </ul>
+              </div>
+              <!-- repeat messages -->
+              <div class="row left d-flex flex-row">
+                <div class="wrapper d-flex mx-2">
+                  <div class="avatar align-self-end">ZW</div>
+                </div>
+                <div class="text w-75">
+
+                  <h4>Michael Hartl</h4>
+                  <div class="status online"></div>
+                  <p>
+                    Lorem ipsum !ol dolor sit amet, consectetur adipisicing elit. Laborum nesciunt ipsum dolore
+                    error repellendus officiis aliquid a, vitae reprehenderit,
+                    accusantium vero, ad. Obcaecati numquam sapiente cupiditate.
+                    Praesentium eaque, quae error
+                  </p>
+                </div>
+                <!-- social panel -->
+                <div class="col-2 col-sm-3"></div>
+                <ul class="list-group list-group-horizontal social-panel">
+                  <li class="list-group-item msg-likes"><i class="far fa-thumbs-up"></i><span>0</span></li>
+                  <li class="list-group-item msg-dislikes"><i class="fas fa-thumbs-down"></i><span>0</span></li>
+                  <li class="list-group-item reply"><span>Ответить</span></li>
+                  <li class="list-group-item"><i class="fas fa-ban"></i></li>
+                </ul>
+              </div>
+
+              <div class="row left d-flex flex-row">
+                <div class="wrapper d-flex mx-2">
+                  <div class="avatar align-self-end">ZW</div>
+                </div>
+                <div class="text w-75">
+
+                  <h4>Michael Hartl</h4>
+                  <div class="status online"></div>
+                  <p>
+                    Lorem ipsum !ol dolor sit amet, consectetur adipisicing elit. Laborum nesciunt ipsum dolore
+                    error repellendus officiis aliquid a, vitae reprehenderit,
+                    accusantium vero, ad. Obcaecati numquam sapiente cupiditate.
+                    Praesentium eaque, quae error
+                  </p>
+                </div>
+                <!-- social panel -->
+                <div class="col-2 col-sm-3"></div>
+                <ul class="list-group list-group-horizontal social-panel">
+                  <li class="list-group-item msg-likes"><i class="far fa-thumbs-up"></i><span>0</span></li>
+                  <li class="list-group-item msg-dislikes"><i class="fas fa-thumbs-down"></i><span>0</span></li>
+                  <li class="list-group-item reply"><span>Ответить</span></li>
+                  <li class="list-group-item"><i class="fas fa-ban"></i></li>
+                </ul>
+              </div>
+
+              <div class="row left d-flex flex-row">
+                <div class="wrapper d-flex mx-2">
+                  <div class="avatar align-self-end">ZW</div>
+                </div>
+                <div class="text w-75">
+
+                  <h4>Michael Hartl</h4>
+                  <div class="status online"></div>
+                  <p>
+                    Lorem ipsum !ol dolor sit amet, consectetur adipisicing elit. Laborum nesciunt ipsum dolore
+                    error repellendus officiis aliquid a, vitae reprehenderit,
+                    accusantium vero, ad. Obcaecati numquam sapiente cupiditate.
+                    Praesentium eaque, quae error
+                  </p>
+                </div>
+                <!-- social panel -->
+                <div class="col-2 col-sm-3"></div>
+                <ul class="list-group list-group-horizontal social-panel">
+                  <li class="list-group-item msg-likes"><i class="far fa-thumbs-up"></i><span">0</span></li>
+                  <li class="list-group-item msg-dislikes"><i class="fas fa-thumbs-down"></i><span">0</span></li>
+                  <li class="list-group-item reply"><span>Ответить</span></li>
+                  <li class="list-group-item"><i class="fas fa-ban"></i></li>
+                </ul>
+              </div>
+
+              <!-- empty message (strip) -->
+              <div class="strip w-100"></div>
+              <!-- message input -->
+              <div class="w-100 msg-input">
+                <div class="reply-attachment">
+                  <h6 class="font-weight-bold">DDDD dDDD
+                    <button type="button" class="close" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </h6>
+                  <p>epellendus officiis aliquid a, vitae reprehenderit,
+                  accusantium vero, ad. Obcaecati numquam sapien</p>
+                </div>
+                <form class="chat-msg" action="#" method="post">
+                  <div class="input-group">
+                    <textarea class="form-control" style="background-color: #011637;color: #f69a73;"></textarea>
+                    <div class="input-group-append">
+                      <span class="input-group-text"><i class="fas fa-location-arrow"></i></span>
+                    </div>
                   </div>
-                  <div class="time">5 min ago</div>
-                </div>
-                <div class="answer-add">
-                  <input placeholder="Write a message">
-                  <span class="answer-btn answer-btn-1"></span>
-                  <span class="answer-btn answer-btn-2"></span>
-                </div>
+                </form>
               </div>
             </div>
-          </div>
+          </section>
+        </div>
+        <!-- chat sidebar -->
+        <div class="chat-sidebar d-none d-md-block col-md-3 w-lg-25 mr-auto">
+
         </div>
       </div>
     </div>
 
-
-
-    <footer class="bg-secondary">
-      <hr>
-      <div class="row px-1">
-        <div class="col-md-6 text-md-right">
-          <a href="#" class="text-dark">Terms of Use</a>
-          <span class="text-muted mx-2">|</span>
-          <a href="#" class="text-dark">Privacy Policy</a>
-        </div>
-        <div class="col-md-6">
-          <p>Copyright &copy; 2019 Tutorial Republic</p>
+    <footer>
+      <div class="container-fluid">
+        <hr>
+        <div class="row px-1">
+          <div class="col-md-6 text-md-right">
+            <a href="#" class="text-dark">Terms of Use</a>
+            <span class="text-muted mx-2">|</span>
+            <a href="#" class="text-dark">Privacy Policy</a>
+          </div>
+          <div class="col-md-6">
+            <p>Copyright &copy; 2019 Tutorial Republic</p>
+          </div>
         </div>
       </div>
     </footer>
