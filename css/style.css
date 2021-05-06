@@ -1,0 +1,79 @@
+* {
+  margin:0;
+  padding:0;
+}
+.no-hover {
+  pointer-events: none;
+}
+body {
+  background-color: #dcdcdd;
+}
+footer {
+  min-height: 40px;
+  background: aqua;
+}
+
+/* radio element */
+.radio-container {
+  position: relative;
+  width: 100%;
+  padding-top: 15%;
+  max-width: 760px;
+
+}
+.radio-container .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 120px;
+  outline: 1px solid grey;
+}
+.radio-logo {
+  float: left;
+  width: 25%;
+  background-color: floralwhite;
+  /* text formating */
+  word-wrap: break-word;
+}
+.radio-body {
+  float: left;
+  background-color: gainsboro;
+  width: 75%;
+}
+.play-pause i {
+  font-size: 4rem;
+  margin-top: 30px;
+}
+/* page content */
+
+/* chat sidebar */
+.chat-sidebar {
+  height: calc(100vh - 150px);
+  background-color: pink;
+  border: 1px solid grey;
+  box-sizing: border-box;
+}
+/* carousel  */
+.carousel_and_sidebars div {
+  height: 50vh;
+}
+.carousel {
+  background: linear-gradient(to bottom right, #0d0220, #200253);
+}
+.carousel-item .img-vertical, .carousel img {
+  height: 50vh;
+  object-fit: contain;
+  /* margin-left: 25%; */
+}
+.carousel-item .img-horizontal {
+  height: 50vh;
+  width: auto;
+  object-fit: contain;
+}
+/* left sidebar */
+div.left-sidebar, div.right-sidebar {
+  display: none;
+  background-color: grey;
+}

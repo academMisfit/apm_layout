@@ -1,0 +1,268 @@
+/* Component Needs */
+.pc-tab > input,
+.pc-tab section > div {
+  display: none;
+}
+#tab1:checked ~ section .tab1,
+#tab2:checked ~ section .tab2 {
+  display: block;
+}
+/* Visual Styles */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  font-weight: 100;
+  font-size: 60px;
+  color: #e74c3c;
+}
+.pc-tab {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.pc-tab ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pc-tab li label {
+  float: left;
+  display: block;
+  margin-bottom: 0;
+  padding: 15px 25px;
+  border: 1px solid #6aa7c4;
+  border-bottom: 0;
+  background: #6aa7c4;
+  color: #ddd7d7;
+}
+.pc-tab li label:hover {
+  background-color: #589cbd;
+}
+.pc-tab li:not(:last-child) label {
+  border-right-width: 0;
+}
+.pc-tab section {
+  clear: both;
+  position: relative;
+  border-right: 1px solid #356699;
+  border-left: 1px solid #356699;
+}
+.pc-tab section > div {
+  padding: 5px 20px 20px;
+  height: calc(100vh - 200px);
+  overflow: hidden;
+  width: 100%;
+  background-color: #356699;
+  line-height: 1.5em;
+  letter-spacing: 0.3px;
+  color: #444;
+}
+.pc-tab section div h2 {
+  border-bottom: 1px solid #ecf0f1;
+  padding-bottom: 20px;
+  letter-spacing: 1px;
+  color: #34495e;
+}
+#tab1:checked ~ nav .tab1 label,
+#tab2:checked ~ nav .tab2 label{
+  background: #356699;;
+  color: #f9ba8d;
+  position: relative;
+  border-left: 1px solid #356699;
+}
+#tab1:checked ~ nav .tab1 label:after,
+#tab2:checked ~ nav .tab2 label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #356699;
+  left: 0;
+  bottom: -1px;
+}
+.roll_up {
+  cursor: pointer;
+  border-bottom: 3px solid black;
+  position: relative;
+  bottom: 8px;
+  opacity: 0.5;
+}
+.roll_up:hover {
+  opacity: 1;
+}
+/* chat users */
+.tab1 h3 {
+  color: #b0b0b0;
+}
+.tab1 .chat-ctrls span {
+  bottom: 15px;
+}
+.list-group-item {
+  border-bottom: 2px solid rgb(52, 78, 159);
+}
+.list-group li{
+  background: #356699;
+}
+.list-group a {
+  color: #4bec9c;
+  text-decoration: none;
+}
+.list-group span:hover {
+  color: #41c784;
+}
+/* chat body */
+.text {
+  position: relative;
+  padding: 10px 15px;
+  background: linear-gradient(to top, #abb1b8, white);
+  border-radius: 8px 8px 8px 0;
+  box-sizing: border-box;
+  border: none;
+  margin: 15px 0 3px;
+}
+.reply-msg {
+  border-left: 3px solid pink;
+  padding: 5px 10px 0;
+}
+.reply-msg p {
+  overflow: hidden;
+  height: 1.5rem;
+
+}
+.text h4,
+.text .status {
+  display: inline-block;
+}
+
+.text .status {
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+}
+
+.text .status.online {
+  background-color: #14a435;
+  box-shadow: 0px 0px 8px #a7faba;
+}
+
+.text .status.offline {
+  background-color: #e35d05;
+  box-shadow: 0px 0px 8px #f8a662;
+}
+
+.left .text::before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  border: 20px solid transparent;
+  border-bottom-width: 0;
+  left: -32px;
+  border-right-color: #abb1b8;
+  border-right-width: 15px;
+}
+/* right */
+.right .text-right {
+  border-radius: 8px 8px 0 8px;
+  background: linear-gradient(to bottom, white, #fbce9b)
+}
+.right .text::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  border: 20px solid transparent;
+  border-bottom-width: 0px;
+  right: -34px;
+  border-left-color: #fbce9b;
+  border-left-width: 15px;
+}
+
+.avatar {
+  height: 6vw;
+  width: 6vw;
+  min-width: 28px;
+  min-height: 28px;
+  max-height: 58px;
+  max-width: 58px;
+  border-radius: 50%;
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  overflow: hidden;
+}
+/* Social panel */
+.social-panel li{
+  background-color: #d2d2d2;
+  cursor: pointer;
+}
+.social-panel i {
+  margin-right: 3px;
+}
+.social-panel .msg-likes span {
+  color: green;
+  margin-left: 3px;
+}
+.social-panel .msg-dislikes span {
+  color: red;
+  margin-left: 3px;
+}
+.social-panel li:hover {
+  background: #b9b4b4;
+}
+.social-panel span:hover, .social-panel .reply span {
+  pointer-events: none;
+}
+.social-panel .fa-ban:hover {
+  color: #f96060;
+}
+/* message input */
+.strip {
+  height: 13vh;
+}
+.msg-input {
+  border: 2px solid transparent;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #356699;
+}
+.msg-input .reply-attachment {
+  display: none;
+  margin: 0;
+  padding: 0 10px;
+  border-left: 3px solid pink;
+  width: 90%;
+  background-color: #011637;
+}
+.msg-input .reply-attachment p {
+  margin: 0;
+  height: 1.5rem;
+  overflow: hidden;
+  color: #ae684b;
+}
+.msg-input .reply-attachment button {
+  color: #66c;
+}
+.msg-input .reply-attachment h6 {
+  color: #716c6c;
+}
+.input-group textarea:focus {
+  background-color: #011637;
+  color: #f69a73;
+  outline: none;
+}
+.input-group-text i {
+  transform: rotate(43deg);
+}
+.input-group-text:hover {
+  color: #356699;
+}
