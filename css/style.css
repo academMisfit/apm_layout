@@ -55,7 +55,7 @@ footer {
   border: 1px solid grey;
   box-sizing: border-box;
 }
-/* carousel  */
+/* carousel and sidebars */
 .carousel_and_sidebars div {
   height: 50vh;
 }
@@ -65,7 +65,6 @@ footer {
 .carousel-item .img-vertical, .carousel img {
   height: 50vh;
   object-fit: contain;
-  /* margin-left: 25%; */
 }
 .carousel-item .img-horizontal {
   height: 50vh;
@@ -76,4 +75,14 @@ footer {
 div.left-sidebar, div.right-sidebar {
   display: none;
   background-color: grey;
+  padding: 15px 5px 15px 15px;
+}
+div.left-sidebar h6, div.right-sidebar h6 {
+  font-weight: bold;
+}
+/* news and sidebars */
+.news-column .img-vertical {
+  object-fit: contain;
+  width: 100%;
+  max-height: 40vh;
 }
