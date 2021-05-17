@@ -229,13 +229,3 @@
         display: none;
     }
 }
-
-/* social panel */
-.likes {
-  width: 10%;
-  border-radius: 5px;
-  background-color: white;
-}
-.likes i {
-  cursor: pointer;
-}
