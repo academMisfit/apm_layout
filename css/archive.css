@@ -19,3 +19,16 @@ a.track-item span:nth-child(n+2) {
   font-style: oblique;
   opacity: 0.9;
 }
+/* track title */
+.track-title {
+  display: ;
+  position: relative;
+}
+.track-title span {
+  font-weight: 1000;
+  color: #dcdcdd;
+  display: inline-block;
+  position: absolute;
+  bottom: 3vh;
+  left: 15%;
+}
