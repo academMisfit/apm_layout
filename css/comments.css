@@ -18,11 +18,12 @@
   text-shadow: 1px 1px 10px #2fa1e6;;
 }
 .comments-wrapper {
-  min-height: 50vh;
+  max-height: 90vh;
   background: white;
   margin-bottom: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  overflow: hidden;
 }
 .comments-ctrls i {
   float: right;

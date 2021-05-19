@@ -5,11 +5,21 @@ $(document).ready(function(){
   //set initial track title
   let trackTitle = $('source').attr("src");
   $('.track-title span').text(trackTitle);
+  //set track's likes and comments
+  let activeTrack = $('.list-group-item.active');
+  let trackLikes = activeTrack[0].childNodes[4].textContent;
+  let trackComments = activeTrack[0].childNodes[6].textContent;
+  $('.likes span').text(trackLikes);
+  $('.comments-icon span').text(trackComments);
+  //add scrollbar to comments
+  $(".comments-wrapper").niceScroll();
 
-  // play track and change styles on tracklist
+
+  // play track and change styles on tracklist on click
   $('.list-group-item').on('click', function(e){
     e.preventDefault();
-    $('.list-group-item.active').removeClass('active');
+    // $('.list-group-item.active').removeClass('active');
+    activeTrack.removeClass('active');
     $(this).addClass('active');
     let track_src = $(this).attr("href");
     $('audio').attr("src", track_src);
