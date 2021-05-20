@@ -44,7 +44,9 @@
 /* comments messages */
 
 /* message header */
-
+.comment-msg {
+  position: relative;
+}
 .avatar {
   height: 6vw;
   width: 6vw;

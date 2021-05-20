@@ -14,9 +14,8 @@ $(document).ready(function(){
   //add scrollbar to comments
   $(".comments-wrapper").niceScroll();
 
-
   // play track and change styles on tracklist on click
-  $('.list-group-item').on('click', function(e){
+  $('.tracklist .list-group-item').on('click', function(e){
     e.preventDefault();
     // $('.list-group-item.active').removeClass('active');
     activeTrack.removeClass('active');
