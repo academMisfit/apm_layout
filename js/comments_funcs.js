@@ -1,11 +1,13 @@
 $(document).ready(function(){
+  //add scrollbar to comments
+  $(".comments-wrapper").niceScroll();
   // scrolldown comments
   $('.comments-icon i').on('click', function(){
     $('.comments-wrapper.collapse').collapse('toggle');
   });
   // collapse comments
   $('.roll_up i').on('click', function(){
-    $('.collapse').collapse('hide');
+    $('.comments-wrapper.collapse').collapse('hide');
   });
   // reply to comment
   $('.comment-header .list-group .reply').on('click', function(e){

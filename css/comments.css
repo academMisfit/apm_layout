@@ -33,6 +33,10 @@
 .comments-ctrls i:hover {
   text-shadow: 1px 1px 10px #2fa1e6;
 }
+.list-group-item i {
+  margin-right: 0.5rem;
+  opacity: 0.9;
+}
 /* comments inputs */
 .input-group-text i {
   transform: rotate(43deg);

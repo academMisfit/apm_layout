@@ -11,8 +11,6 @@ $(document).ready(function(){
   let trackComments = activeTrack[0].childNodes[6].textContent;
   $('.likes span').text(trackLikes);
   $('.comments-icon span').text(trackComments);
-  //add scrollbar to comments
-  $(".comments-wrapper").niceScroll();
 
   // play track and change styles on tracklist on click
   $('.tracklist .list-group-item').on('click', function(e){

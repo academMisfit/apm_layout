@@ -12,7 +12,9 @@ footer {
   min-height: 40px;
   background: aqua;
 }
-
+.content-wrapper {
+  min-height: calc(100vh - 100px);
+}
 /* radio element */
 .radio-container {
   position: relative;
@@ -76,12 +78,14 @@ div.left-sidebar, div.right-sidebar {
   display: none;
   background-color: grey;
   padding: 15px 5px 15px 15px;
+  min-height: 70vh;
 }
 div.left-sidebar h6, div.right-sidebar h6 {
   font-weight: bold;
 }
 /* news and sidebars */
-.news-column .img-vertical {
+/* .news-column .img-vertical { */
+.img-vertical {
   object-fit: contain;
   width: 100%;
   max-height: 40vh;
