@@ -1,0 +1,45 @@
+.avatar-box {
+  background-color: pink;
+  height: 15vw;
+  width: 15vw;
+  min-height: 78px;
+  min-width: 78px;
+  max-height: 140px;
+  max-width: 140px;
+  border-radius: 8px;
+  font-size: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+}
+@media (min-width: 700px) {
+  .avatar-box {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 950px) {
+  .avatar-box {
+    font-size: 4rem;
+  }
+}
+.user-email i {
+  color: grey;
+  opacity: 0.5;
+  cursor: pointer;
+  margin-top: 0.2rem;
+}
+.user-email i:hover {
+  opacity: 1;
+}
+.new-email-input {
+  display: none;
+}
+.confirm-email {
+  line-height: 0.3;
+}
+ul {
+  list-style-type: none;
+}

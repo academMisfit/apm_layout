@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <!-- profile functions -->
+    <script src="js/profile_funcs.js"></script>
+  </head>
+  <body>
+    <!-- header -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-0">
+      <a href="#" class="navbar-brand mr-3">APM radio</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+          <a href="index.html" class="nav-item nav-link">Главная</a>
+          <a href="archive.html" class="nav-item nav-link">Архив</a>
+          <a href="#" class="nav-item nav-link">Профиль</a>
+        </div>
+        <div class="navbar-nav ml-auto">
+          <a href="#" class="nav-item nav-link">Зарегистрироваться</a>
+          <a href="#" class="nav-item nav-link">Войти</a>
+        </div>
+      </div>
+    </nav>
+    <div class="content-wrapper container-fluid">
+      <div class="avatar-box">
+        MH
+      </div>
+      <div class="user-name d-flex justify-content-start mt-2">
+        <h5 class="mt2">Michael Hartl</h5>
+      </div>
+      <div class="user-email d-flex flex-row mt-1">
+        <h5 class="mt2">mhartl@example.com</h5><i class="far fa-edit fa-s ml-2"></i>
+      </div>
+      <p class="confirm-email"><small>Почта не подтверждена. </small><a href="#"><small>Подвердить почту</small></a></p>
+      <form class="new-email-input">
+        <div class="form-group col-md-6">
+          <label for="exampleInputEmail1">Введите новый адрес электронной почты:</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="newEmail" placeholder="Новая почта">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <button type="submit" class="btn btn-primary ml-3">Отправить</button>
+        <button type="submit" class="btn btn-secondary cancel">Отмена</button>
+      </form>
+      <ul>
+        <li>Статьи:</li>
+        <li><a href="#">Article 1<em class="ml-2"> - </em><i class="far fa-heart fa-xs mx-1"></i><small>1</small><i class="far fa-comment-alt fa-xs mx-1"></i><small>12</small></a></li>
+        <li><a href="#">Article 2<em class="ml-2"> - </em><i class="far fa-heart fa-xs mx-1"></i><small>1</small><i class="far fa-comment-alt fa-xs mx-1"></i><small>12</small></a></li>
+        <li><a href="#">Article 3<em class="ml-2"> - </em><i class="far fa-heart fa-xs mx-1"></i><small>1</small><i class="far fa-comment-alt fa-xs mx-1"></i><small>12</small></a></li>
+        <li><a href="#">Article 4<em class="ml-2"> - </em><i class="far fa-heart fa-xs mx-1"></i><small>1</small><i class="far fa-comment-alt fa-xs mx-1"></i><small>12</small></a></li>
+        <li><a href="#">Article 5<em class="ml-2"> - </em><i class="far fa-heart fa-xs mx-1"></i><small>1</small><i class="far fa-comment-alt fa-xs mx-1"></i><small>12</small></a></li>
+      </ul>
+    </div>
+
+    <footer>
+      <div class="container-fluid">
+        <hr>
+        <div class="row px-1">
+          <div class="col-md-6 text-md-right">
+            <a href="#" class="text-dark">Terms of Use</a>
+            <span class="text-muted mx-2">|</span>
+            <a href="#" class="text-dark">Privacy Policy</a>
+          </div>
+          <div class="col-md-6">
+            <p>Copyright &copy; 2019 Tutorial Republic</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
