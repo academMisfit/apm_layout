@@ -17,8 +17,10 @@ $(document).ready(function(){
     let replies = comment_msg.querySelector('.comment-responses');
     if (replies){
       replies.insertAdjacentElement('beforebegin', replyTextarea);
+      document.querySelector('textarea').focus();
     } else {
       comment_msg.append(replyTextarea);
+      document.querySelector('textarea').focus();
     }
   });
 });
