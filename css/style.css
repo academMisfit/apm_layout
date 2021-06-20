@@ -15,39 +15,6 @@ footer {
 .content-wrapper {
   min-height: calc(100vh - 100px);
 }
-/* radio element */
-.radio-container {
-  position: relative;
-  width: 100%;
-  padding-top: 15%;
-  max-width: 760px;
-
-}
-.radio-container .inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  max-height: 120px;
-  outline: 1px solid grey;
-}
-.radio-logo {
-  float: left;
-  width: 25%;
-  background-color: floralwhite;
-  /* text formating */
-  word-wrap: break-word;
-}
-.radio-body {
-  float: left;
-  background-color: gainsboro;
-  width: 75%;
-}
-.play-pause i {
-  font-size: 4rem;
-  margin-top: 30px;
-}
 /* page content */
 
 /* chat sidebar */
@@ -84,7 +51,6 @@ div.left-sidebar h6, div.right-sidebar h6 {
   font-weight: bold;
 }
 /* news and sidebars */
-/* .news-column .img-vertical { */
 .img-vertical {
   object-fit: contain;
   width: 100%;
