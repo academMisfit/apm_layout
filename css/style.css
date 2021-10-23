@@ -31,7 +31,7 @@ footer {
 .carousel {
   background: linear-gradient(to bottom right, #0d0220, #200253);
 }
-.carousel-item .img-vertical, .carousel img {
+.carousel-item .carousel img {
   height: 50vh;
   object-fit: contain;
 }
@@ -39,6 +39,11 @@ footer {
   height: 50vh;
   width: auto;
   object-fit: contain;
+}
+.carousel-item .img-vertical {
+  max-height: 50vh;
+  height: auto;
+  max-width: 100%;
 }
 /* left sidebar */
 div.left-sidebar, div.right-sidebar {
